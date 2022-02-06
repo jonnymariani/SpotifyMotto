@@ -6,11 +6,11 @@
   <h3 align="center">SPOTIFY MOTTO</h3>
 
   <p align="center">
-    An awesome <a href="https://github.com/sirjonasxx/G-Earth">G-Earth</a> extension to show the world what you listening!
+    An awesome <a href="https://github.com/sirjonasxx/G-Earth">G-Earth</a> Extension to show the world what you listening!
     <br />
     <br />
     <br />
-    <h3 ">Features</h3>
+    <h3 align="left" >Features</h3>
   </p>
 
 </div>
