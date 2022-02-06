@@ -24,3 +24,4 @@ D:\Github Repos\SpotifyMotto\SpotifyMotto\bin\Debug\net5.0-windows\SpotifyMotto.
 D:\Github Repos\SpotifyMotto\SpotifyMotto\bin\Debug\net5.0-windows\ref\SpotifyMotto.dll
 D:\Github Repos\SpotifyMotto\SpotifyMotto\bin\Debug\net5.0-windows\SpotifyMotto.pdb
 D:\Github Repos\SpotifyMotto\SpotifyMotto\obj\Debug\net5.0-windows\SpotifyMotto.genruntimeconfig.cache
+D:\Github Repos\SpotifyMotto\SpotifyMotto\obj\Debug\net5.0-windows\SpotifyMotto.Properties.Resources.resources
