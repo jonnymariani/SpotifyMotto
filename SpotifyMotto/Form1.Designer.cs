@@ -34,13 +34,14 @@
             this.LINKGithub = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // TXTNoMusic
             // 
             this.TXTNoMusic.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TXTNoMusic.Location = new System.Drawing.Point(34, 193);
+            this.TXTNoMusic.Location = new System.Drawing.Point(17, 197);
             this.TXTNoMusic.MaxLength = 38;
             this.TXTNoMusic.Name = "TXTNoMusic";
             this.TXTNoMusic.PlaceholderText = "Your motto here :)";
@@ -52,7 +53,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("SimSun", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(34, 179);
+            this.label1.Location = new System.Drawing.Point(17, 183);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(95, 11);
             this.label1.TabIndex = 2;
@@ -61,7 +62,7 @@
             // LINKGithub
             // 
             this.LINKGithub.AutoSize = true;
-            this.LINKGithub.Location = new System.Drawing.Point(327, 222);
+            this.LINKGithub.Location = new System.Drawing.Point(17, 226);
             this.LINKGithub.Name = "LINKGithub";
             this.LINKGithub.Size = new System.Drawing.Size(42, 15);
             this.LINKGithub.TabIndex = 3;
@@ -72,7 +73,7 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(375, 222);
+            this.linkLabel1.Location = new System.Drawing.Point(65, 226);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(46, 15);
             this.linkLabel1.TabIndex = 4;
@@ -84,18 +85,29 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.InitialImage = null;
-            this.pictureBox1.Location = new System.Drawing.Point(154, 15);
+            this.pictureBox1.Location = new System.Drawing.Point(137, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(146, 146);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(410, 197);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(44, 26);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Save";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(455, 253);
+            this.ClientSize = new System.Drawing.Size(470, 261);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.LINKGithub);
@@ -119,5 +131,6 @@
         private System.Windows.Forms.LinkLabel LINKGithub;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
     }
 }
