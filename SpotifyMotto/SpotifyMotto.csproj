@@ -7,4 +7,14 @@
     <UseWindowsForms>true</UseWindowsForms>
   </PropertyGroup>
 
+  <ItemGroup>
+		<PackageReference Include="Xabbo.GEarth" Version="1.0.0-beta.2" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<None Include="$(SolutionDir)\Xabbo.Messages\messages.ini">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</None>
+	</ItemGroup>
+
 </Project>

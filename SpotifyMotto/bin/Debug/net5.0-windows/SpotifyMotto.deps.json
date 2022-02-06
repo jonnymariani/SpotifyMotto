@@ -6,6 +6,14 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v5.0": {
+      "SpotifyMotto/1.0.0": {
+        "dependencies": {
+          "Xabbo.GEarth": "1.0.0-beta.2"
+        },
+        "runtime": {
+          "SpotifyMotto.dll": {}
+        }
+      },
       "Microsoft.Extensions.Configuration.Abstractions/5.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "5.0.0"
@@ -73,6 +81,11 @@
     }
   },
   "libraries": {
+    "SpotifyMotto/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Microsoft.Extensions.Configuration.Abstractions/5.0.0": {
       "type": "package",
       "serviceable": true,

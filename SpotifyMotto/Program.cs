@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Xabbo.GEarth;
 
 namespace SpotifyMotto
 {
@@ -17,7 +18,28 @@ namespace SpotifyMotto
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            // Cria Extensao
+            Extension extension = new Extension(
+                GEarthOptions.Default
+                    .WithName("Spotify Motto")
+                    .WithVersion("1.0.0") 
+                    .WithDescription("")
+                    .WithAuthor("SACR3D")
+            );
+
+            // Create the main form, passing in the extension
+            Form1 form = new Form1(extension);
+
+            // Create the extension handler
+            GEarthFormHandler handler = new GEarthFormHandler(form, extension);
+
+            // Run the extension
+            _ = handler.RunAsync();
+
+
+
+            Application.Run();
         }
     }
 }
