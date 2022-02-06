@@ -30,7 +30,6 @@ namespace SpotifyMotto
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(SpotifyMotto.GetSpotifyTrack());
         }
 
 
@@ -45,6 +44,9 @@ namespace SpotifyMotto
 
                 if (String.Equals(OldMotto, Motto) == false)
                 {
+                    SpotifyMotto.SendBadge("Playing:\n" + Motto);
+
+
                     SpotifyMotto.ChangeMotto(Motto);
                     OldMotto = Motto;
                 }

@@ -46,7 +46,7 @@
             // 
             this.TXTNoMusic.Location = new System.Drawing.Point(516, 185);
             this.TXTNoMusic.Name = "TXTNoMusic";
-            this.TXTNoMusic.Size = new System.Drawing.Size(100, 23);
+            this.TXTNoMusic.Size = new System.Drawing.Size(230, 23);
             this.TXTNoMusic.TabIndex = 1;
             this.TXTNoMusic.Text = "No song motto";
             // 

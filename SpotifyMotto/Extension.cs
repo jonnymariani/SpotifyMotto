@@ -18,6 +18,11 @@ namespace SpotifyMotto
             : base(options)
         { }
 
+        List<String> Badges = new List<string>()
+        {
+            "https://images.habbo.com/c_images/album1584/PLZ13.png",
+            "https://images.habbo.com/c_images/album1584/ES518.png"
+        };
 
         public String NoMusicMotto = "";
 
@@ -42,6 +47,16 @@ namespace SpotifyMotto
         public void ChangeMotto(String motto)
         {
             Send(Out.ChangeAvatarMotto, motto);
+        }
+
+        public void SendBadge(String MusicName)
+        {
+            Random rnd = new Random();
+
+            int r = rnd.Next(Badges.Count);
+
+            Send(In.Notification, "", 3, "display", "BUBBLE", "message", MusicName, "image", Badges[r]);
+
         }
 
 
