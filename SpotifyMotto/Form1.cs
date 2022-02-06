@@ -24,7 +24,38 @@ namespace SpotifyMotto
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            _ = StartWork();
+            SpotifyMotto.NoMusicMotto = TXTNoMusic.Text;
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(SpotifyMotto.GetSpotifyTrack());
+        }
+
+
+        public async Task StartWork()
+        {
+            String OldMotto = "";
+
+            while (true)
+            {
+                
+                String Motto =  SpotifyMotto.GetSpotifyTrack();
+
+                if (String.Equals(OldMotto, Motto) == false)
+                {
+                    SpotifyMotto.ChangeMotto(Motto);
+                    OldMotto = Motto;
+                }
+
+                await Task.Delay(5000);
+
+            }
+
+
+
+        }
+
     }
 }
