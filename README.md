@@ -24,7 +24,7 @@
 <br>
 
 * Habbo Flash/AIR Client: :heavy_check_mark:
-* HabboUnity: :x:
+* Habbo Unity Client: :x:
 
 ##
 <br>
@@ -32,4 +32,3 @@
 * Spotify: :heavy_check_mark:
 * Other Services: :x:
 
-##
