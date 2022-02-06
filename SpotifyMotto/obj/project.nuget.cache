@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "DJTKoC4Fuggs6kemoKnagN9T3yVhL96WSD0LGgqVdEFy9ewiHsmBn8F0IEai6W0k7whux+W25rBhSbAWK9fgpA==",
+  "success": true,
+  "projectFilePath": "D:\\Github Repos\\SpotifyMotto\\SpotifyMotto\\SpotifyMotto.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jonny\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.13\\microsoft.netcore.app.host.win-x64.5.0.13.nupkg.sha512",
+    "C:\\Users\\jonny\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\jonny\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\jonny\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
