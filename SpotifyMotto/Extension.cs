@@ -12,12 +12,11 @@ namespace SpotifyMotto
 {
     public class Extension : GEarthExtension
     {
+        public Extension(GEarthOptions options) : base(options)
+        { 
+        }
 
-
-        public Extension(GEarthOptions options)
-            : base(options)
-        { }
-
+        //Cool badges to show 
         List<String> Badges = new List<string>()
         {
             "https://images.habbo.com/c_images/album1584/PLZ13.png",
@@ -25,7 +24,6 @@ namespace SpotifyMotto
         };
 
         public String NoMusicMotto = "";
-
         public string GetSpotifyTrack()
         {
             var proc = Process.GetProcessesByName("Spotify").FirstOrDefault(p => !string.IsNullOrWhiteSpace(p.MainWindowTitle));
@@ -51,9 +49,11 @@ namespace SpotifyMotto
 
         public void SendBadge(String MusicName)
         {
-            Random rnd = new Random();
 
+            //Choose random badge
+            Random rnd = new Random();
             int r = rnd.Next(Badges.Count);
+
 
             Send(In.Notification, "", 3, "display", "BUBBLE", "message", MusicName, "image", Badges[r]);
 

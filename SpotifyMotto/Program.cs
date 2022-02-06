@@ -13,19 +13,19 @@ namespace SpotifyMotto
         ///  The main entry point for the application.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] args)
         {
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Cria Extensao
+            // Create extension
             Extension extension = new Extension(
                 GEarthOptions.Default
                     .WithName("Spotify Motto")
-                    .WithVersion("1.0.0") 
-                    .WithDescription("")
-                    .WithAuthor("SACR3D")
+                    .WithVersion("1.0") 
+                    .WithDescription("Show everyone what you listening!")
+                    .WithAuthor("SACR3D")                    
             );
 
             // Create the main form, passing in the extension
@@ -36,8 +36,6 @@ namespace SpotifyMotto
 
             // Run the extension
             _ = handler.RunAsync();
-
-
 
             Application.Run();
         }

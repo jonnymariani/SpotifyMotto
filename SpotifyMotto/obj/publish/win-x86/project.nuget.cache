@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "GwCyuSjiqvSj/C56LYi7r1xuAPKFL1tEaPUgdBlLiZ7N4g3VDHFQu2hlGgMjgMLJSG+IC+L8L/BW1RohKRHUfQ==",
+  "success": true,
+  "projectFilePath": "D:\\Github Repos\\SpotifyMotto\\SpotifyMotto\\SpotifyMotto.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jonny\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\jonny\\.nuget\\packages\\microsoft.extensions.configuration.binder\\5.0.0\\microsoft.extensions.configuration.binder.5.0.0.nupkg.sha512",
+    "C:\\Users\\jonny\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\jonny\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
+    "C:\\Users\\jonny\\.nuget\\packages\\xabbo.common\\1.0.0-beta.2\\xabbo.common.1.0.0-beta.2.nupkg.sha512",
+    "C:\\Users\\jonny\\.nuget\\packages\\xabbo.gearth\\1.0.0-beta.2\\xabbo.gearth.1.0.0-beta.2.nupkg.sha512",
+    "C:\\Users\\jonny\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\jonny\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\5.0.0\\microsoft.windowsdesktop.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\jonny\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\5.0.0\\microsoft.aspnetcore.app.ref.5.0.0.nupkg.sha512",
+    "C:\\Users\\jonny\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\5.0.13\\microsoft.netcore.app.runtime.win-x86.5.0.13.nupkg.sha512",
+    "C:\\Users\\jonny\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\5.0.13\\microsoft.windowsdesktop.app.runtime.win-x86.5.0.13.nupkg.sha512",
+    "C:\\Users\\jonny\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\5.0.13\\microsoft.aspnetcore.app.runtime.win-x86.5.0.13.nupkg.sha512",
+    "C:\\Users\\jonny\\.nuget\\packages\\microsoft.netcore.app.host.win-x86\\5.0.13\\microsoft.netcore.app.host.win-x86.5.0.13.nupkg.sha512"
+  ],
+  "logs": []
+}

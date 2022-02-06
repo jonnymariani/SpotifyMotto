@@ -1,0 +1,12 @@
+D:\Github Repos\SpotifyMotto\SpotifyMotto\bin\Release\net5.0-windows\publish\Xabbo.Messages\messages.ini
+D:\Github Repos\SpotifyMotto\SpotifyMotto\bin\Release\net5.0-windows\publish\SpotifyMotto.exe
+D:\Github Repos\SpotifyMotto\SpotifyMotto\bin\Release\net5.0-windows\publish\SpotifyMotto.dll
+D:\Github Repos\SpotifyMotto\SpotifyMotto\bin\Release\net5.0-windows\publish\SpotifyMotto.deps.json
+D:\Github Repos\SpotifyMotto\SpotifyMotto\bin\Release\net5.0-windows\publish\SpotifyMotto.runtimeconfig.json
+D:\Github Repos\SpotifyMotto\SpotifyMotto\bin\Release\net5.0-windows\publish\SpotifyMotto.pdb
+D:\Github Repos\SpotifyMotto\SpotifyMotto\bin\Release\net5.0-windows\publish\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Github Repos\SpotifyMotto\SpotifyMotto\bin\Release\net5.0-windows\publish\Microsoft.Extensions.Configuration.Binder.dll
+D:\Github Repos\SpotifyMotto\SpotifyMotto\bin\Release\net5.0-windows\publish\Microsoft.Extensions.Primitives.dll
+D:\Github Repos\SpotifyMotto\SpotifyMotto\bin\Release\net5.0-windows\publish\System.IO.Pipelines.dll
+D:\Github Repos\SpotifyMotto\SpotifyMotto\bin\Release\net5.0-windows\publish\Xabbo.Common.dll
+D:\Github Repos\SpotifyMotto\SpotifyMotto\bin\Release\net5.0-windows\publish\Xabbo.GEarth.dll
