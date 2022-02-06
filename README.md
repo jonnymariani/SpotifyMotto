@@ -15,17 +15,19 @@
 </div>
 
 ## Features
-
+<br>
 
 * It shows in your avatar motto the song you are actually listening on Spotify.
 * Change your motto back to the original once you stop listening.
 
 ## Compatibility
+<br>
 
 * Habbo Flash/AIR Client: :heavy_check_mark:
 * HabboUnity: :x:
 
 ##
+<br>
 
 * Spotify: :heavy_check_mark:
 * Other Services: :x:
