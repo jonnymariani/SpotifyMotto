@@ -10,11 +10,10 @@
     <br />
     <br />
     <br />
+    <h3 ">Features</h3>
   </p>
 
 </div>
-
-#features
 
 * It shows in your avatar motto the song you are actually listening on Spotify.
 * Change your motto back to the original once you stop listening.
