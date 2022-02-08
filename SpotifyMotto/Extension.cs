@@ -54,12 +54,9 @@ namespace SpotifyMotto
             Random rnd = new Random();
             int r = rnd.Next(Badges.Count);
 
-
             Send(In.Notification, "", 3, "display", "BUBBLE", "message", MusicName, "image", Badges[r]);
 
         }
-
-
 
     }
 }

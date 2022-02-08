@@ -27,8 +27,6 @@ namespace SpotifyMotto
         private void Form1_Load(object sender, EventArgs e)
         {
             _ = StartWork();
-
-            SpotifyMotto.NoMusicMotto = Properties.Settings.Default.OriginalMotto;
             TXTNoMusic.Text = Properties.Settings.Default.OriginalMotto;
 
         }
@@ -41,12 +39,18 @@ namespace SpotifyMotto
             {
                 if (Working)
                 {
+                    SpotifyMotto.NoMusicMotto = Properties.Settings.Default.OriginalMotto;
                     String Motto = SpotifyMotto.GetSpotifyTrack();
 
                     if (String.Equals(OldMotto, Motto) == false)
                     {
-                        SpotifyMotto.SendBadge("Playing:\n" + Motto);
 
+
+                        if (Motto != SpotifyMotto.NoMusicMotto)
+                        {
+                            SpotifyMotto.SendBadge("Playing:\n" + Motto);
+
+                        }
 
                         SpotifyMotto.ChangeMotto(Motto);
                         OldMotto = Motto;
@@ -118,6 +122,11 @@ namespace SpotifyMotto
         {
             Properties.Settings.Default.OriginalMotto = TXTNoMusic.Text;
             Properties.Settings.Default.Save();
+
+            MessageBox.Show("Done", "Saved");
+
+
+
         }
     }
 }
