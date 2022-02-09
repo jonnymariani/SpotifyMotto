@@ -1,4 +1,6 @@
 
+![GitHub repo size](https://img.shields.io/github/issues/jonnymariani/SpotifyMotto?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/jonnymariani/SpotifyMotto?style=for-the-badge)
 <br />
 <div align="center">
     <img src="SpotifyMotto/resources/hiphopcar.gif" alt="Logo">
