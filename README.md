@@ -24,7 +24,7 @@
 * Shows in your avatar motto the song you are actually listening on Spotify.
 * Change your motto back to the original once you stop listening.
 * Option to remove text between parentheses and brackets.
-* Option to say the music you listening in chat.
+* Option to say the song you are listening to in chat.
 * Option to use prefixes before music names.
   
   <br>
@@ -51,5 +51,6 @@
 ## Ideas
 
 - [x] Motto Filters ✔️
+- [x] Say the song you are listening to ✔️
 - [ ] Anti Afk
 - [ ] Bobba Filter
