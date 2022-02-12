@@ -9,11 +9,11 @@
 
   <p align="center">
     An awesome <a href="https://github.com/sirjonasxx/G-Earth">G-Earth</a> extension to show the world what you listening!
-    <br />
-    <br />
-    <br />
   </p>
-
+    
+ <br>   
+<img src="SpotifyMotto/resources/example.gif" alt="Example">
+<br>
 </div>
 
 ## Features
@@ -21,6 +21,11 @@
 
 * It shows in your avatar motto the song you are actually listening on Spotify.
 * Change your motto back to the original once you stop listening.
+* Option to remove text between parentheses and brackets
+* Option to say the music you listening in chat
+* Option to use prefixes before music names
+
+<br>
 
 ## Compatibility
 <br>
@@ -34,3 +39,6 @@
 * Spotify: :heavy_check_mark:
 * Other Services: :x:
 
+<br>
+
+##
