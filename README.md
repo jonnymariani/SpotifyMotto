@@ -47,3 +47,9 @@
 * Other Services: :x:
 
 ##
+
+## Ideas
+
+- [x] Motto Filters ✔️
+- [ ] Anti Afk
+- [ ] Bobba Filter
