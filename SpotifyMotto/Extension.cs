@@ -7,6 +7,7 @@ using Xabbo.Messages;
 using Xabbo.Interceptor;
 using Xabbo.GEarth;
 using System.Diagnostics;
+using System.Text.RegularExpressions;
 
 namespace SpotifyMotto
 {
@@ -15,6 +16,24 @@ namespace SpotifyMotto
         public Extension(GEarthOptions options) : base(options)
         { 
         }
+
+
+
+
+        //Strings
+        public String StandardPrefix = "Listening: ";
+
+
+
+
+        //Settings
+        public String Language = Properties.Settings.Default.Language;
+        public bool RemoveParentheses = Properties.Settings.Default.RemoveParentheses;
+        public bool RemoveBrackets =Properties.Settings.Default.RemoveBrackets;
+        public bool SayChat = Properties.Settings.Default.SayChat;
+        public bool UsePrefix = Properties.Settings.Default.UsePrefix;
+        public String CustomPrefix = Properties.Settings.Default.CustomPrefix;
+
 
         //Cool badges to show 
         List<String> Badges = new List<string>()
@@ -44,7 +63,7 @@ namespace SpotifyMotto
 
         public void ChangeMotto(String motto)
         {
-            Send(Out.ChangeAvatarMotto, motto);
+            Send(Out.ChangeAvatarMotto, motto);       
         }
 
         public void SendBadge(String MusicName)
@@ -57,6 +76,31 @@ namespace SpotifyMotto
             Send(In.Notification, "", 3, "display", "BUBBLE", "message", MusicName, "image", Badges[r]);
 
         }
+
+
+        public void SendChatText(String Text)
+        {
+            Send(Out.Shout, Text, 0);
+        }
+
+
+        public String DoRemoveParentheses(String Text)
+        {
+            Text = Regex.Replace(Text, @"\(.*\)", "");
+            Text = Regex.Replace(Text, @"\s+", " ");
+
+            return Text;
+        }
+
+        public String DoRemoveBrackets(String Text)
+        {
+            Text = Regex.Replace(Text, @"\[.*\]", "");
+            Text = Regex.Replace(Text, @"\s+", " ");
+
+            return Text;
+        }
+
+
 
     }
 }

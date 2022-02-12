@@ -23,13 +23,14 @@ namespace SpotifyMotto
             Extension extension = new Extension(
                 GEarthOptions.Default
                     .WithName("Spotify Motto")
-                    .WithVersion("1.0") 
+                    .WithVersion("2.0 beta") 
                     .WithDescription("Show everyone what you listening!")
                     .WithAuthor("SACR3D")                    
             );
 
             // Create the main form, passing in the extension
             Form1 form = new Form1(extension);
+            SettingsForm settingform = new SettingsForm(extension);
 
             // Create the extension handler
             GEarthFormHandler handler = new GEarthFormHandler(form, extension);

@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,13 +16,24 @@ namespace SpotifyMotto
 {
     public partial class Form1 : Form
     {
-        private readonly Extension SpotifyMotto;
+        public readonly Extension SpotifyMotto;
+
+        
         bool Working = true;
 
         public Form1(Extension _extension)
         {
             SpotifyMotto = _extension;
             InitializeComponent();
+        }
+
+        public Extension GetExtension()
+        {
+            return SpotifyMotto;
+        }
+        public void ChangeStringLanguage(string str)
+        {
+            LBLOriginalMotto.Text = str;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -42,55 +54,61 @@ namespace SpotifyMotto
                     SpotifyMotto.NoMusicMotto = Properties.Settings.Default.OriginalMotto;
                     String Motto = SpotifyMotto.GetSpotifyTrack();
 
+                    if (SpotifyMotto.RemoveParentheses)
+                    {
+                        Motto = SpotifyMotto.DoRemoveParentheses(Motto);
+                    }
+
+                    if (SpotifyMotto.RemoveBrackets)
+                    {
+                        Motto = SpotifyMotto.DoRemoveBrackets(Motto);
+                    }
+
                     if (String.Equals(OldMotto, Motto) == false)
                     {
+
+                        String Prefix = "";
+                        if (SpotifyMotto.UsePrefix)
+                        {
+                            if (SpotifyMotto.CustomPrefix != "")
+                            {
+                                Prefix = SpotifyMotto.CustomPrefix + ": ";
+                            }
+                            else
+                            {
+                                Prefix = SpotifyMotto.StandardPrefix;
+                            }
+                        }                     
+
+                        if (Motto != SpotifyMotto.NoMusicMotto)
+                        {
+                            SpotifyMotto.SendBadge("Playing:\n" + Motto);                            
+                        }               
+
+                        if (SpotifyMotto.SayChat && Motto != SpotifyMotto.NoMusicMotto)
+                        {
+                            SpotifyMotto.SendChatText(Prefix + Motto);                            
+                        }
+
+                        //Time to habbo process the sent chat packages
+                        await Task.Delay(2000);
 
 
                         if (Motto != SpotifyMotto.NoMusicMotto)
                         {
-                            SpotifyMotto.SendBadge("Playing:\n" + Motto);
-
+                            SpotifyMotto.ChangeMotto(Prefix + Motto);
+                        }
+                        else
+                        {
+                            SpotifyMotto.ChangeMotto(Motto);
                         }
 
-                        SpotifyMotto.ChangeMotto(Motto);
                         OldMotto = Motto;
                     }
                 }
 
-                await Task.Delay(5000);
+                await Task.Delay(2000);
 
-            }
-        }
-
-        private void LINKGithub_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            string url = "https://github.com/jonnymariani/SpotifyMotto";
-
-            //Open URL 
-            try
-            {
-                Process.Start(url);
-            }
-            catch
-            {
-                // hack because of this: https://github.com/dotnet/corefx/issues/10361
-                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
-                {
-                    url = url.Replace("&", "^&");
-                    Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
-                }
-                else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
-                {
-                    Process.Start("xdg-open", url);
-                }
-                else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
-                {
-                    Process.Start("open", url);
-                }
-                else
-                {
-                    throw;
-                }
             }
         }
 
@@ -115,18 +133,59 @@ namespace SpotifyMotto
                 SpotifyMotto.ChangeMotto(OldMotto);
             }
 
-
         }
 
-        private void BTNSave_Click(object sender, EventArgs e)
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<SettingsForm>().Count() == 1)
+            {
+                _ = Application.OpenForms.OfType<SettingsForm>().FirstOrDefault().Focus();
+
+            }
+            else
+            {
+                var SettingsForm1 = new SettingsForm(SpotifyMotto);
+                SettingsForm1.Show();
+            }            
+        }
+
+        private void TXTNoMusic_TextChanged(object sender, EventArgs e)
         {
             Properties.Settings.Default.OriginalMotto = TXTNoMusic.Text;
             Properties.Settings.Default.Save();
+        }
 
-            MessageBox.Show("Done", "Saved");
+        private void PBGithub_Click(object sender, EventArgs e)
+        {
+            string url = "https://github.com/jonnymariani/SpotifyMotto";
 
-
-
+            //Open URL 
+            try
+            {
+                Process.Start(url);
+            }
+            catch
+            {
+                // Trick because of this: https://github.com/dotnet/corefx/issues/10361
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                {
+                    url = url.Replace("&", "^&");
+                    Process.Start(new ProcessStartInfo("cmd", $"/c start {url}") { CreateNoWindow = true });
+                }
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
+                {
+                    Process.Start("xdg-open", url);
+                }
+                else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
+                {
+                    Process.Start("open", url);
+                }
+                else
+                {
+                    throw;
+                }
+            }
         }
     }
 }
