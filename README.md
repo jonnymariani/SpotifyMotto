@@ -39,6 +39,4 @@
 * Spotify: :heavy_check_mark:
 * Other Services: :x:
 
-<br>
-
 ##
