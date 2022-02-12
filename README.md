@@ -4,7 +4,7 @@
 <br>
 
 <div align="center">
-    <img src="SpotifyMotto/resources/hiphopcar.gif" alt="Logo">
+    <a href="#"><img src="SpotifyMotto/resources/hiphopcar.gif" alt="Logo"></a>
 
   <h3 align="center">SPOTIFY MOTTO</h3>
 
@@ -13,7 +13,7 @@
   </p>
     
  <br>   
-<img src="SpotifyMotto/resources/example.gif" alt="Example">
+<a href="#"><img src="SpotifyMotto/resources/example.gif" alt="Example"></a>
 <br>
 </div>
 
@@ -28,7 +28,7 @@
 * Option to use prefixes before music names.
   
   <br>
-  <img src="SpotifyMotto/resources/screenshot2.png" width="25%" alt="Settings">
+  <a href="#"><img src="SpotifyMotto/resources/screenshot2.png" width="25%" alt="Settings"></a>
 
 
 <br>
