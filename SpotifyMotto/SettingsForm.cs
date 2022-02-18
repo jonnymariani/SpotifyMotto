@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -13,6 +14,14 @@ namespace SpotifyMotto
 {
     public partial class SettingsForm : Form
     {
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
         public Extension SpotifyMotto;
         Form1 frm;
 
@@ -103,8 +112,64 @@ namespace SpotifyMotto
         }
 
 
+        private void BTNClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
 
+        //Close button style
+        private void BTNClose_MouseDown(object sender, MouseEventArgs e)
+        {
+            BTNClose.Image = Properties.Resources.closebtn_click;
+            BTNClose.FlatStyle = FlatStyle.Flat;
+            BTNClose.BackColor = Color.Transparent;
+            BTNClose.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            BTNClose.FlatAppearance.MouseOverBackColor = Color.Transparent;
+        }
 
+        private void BTNClose_MouseUp(object sender, MouseEventArgs e)
+        {
+            BTNClose.Image = Properties.Resources.closebtn;
+            BTNClose.FlatStyle = FlatStyle.Flat;
+            BTNClose.BackColor = Color.Transparent;
+            BTNClose.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            BTNClose.FlatAppearance.MouseOverBackColor = Color.Transparent;
+        }
 
+        private void BTNClose_MouseEnter(object sender, EventArgs e)
+        {
+            BTNClose.Image = Properties.Resources.closebtn_hover;
+            BTNClose.FlatStyle = FlatStyle.Flat;
+            BTNClose.BackColor = Color.Transparent;
+            BTNClose.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            BTNClose.FlatAppearance.MouseOverBackColor = Color.Transparent;
+        }
+
+        private void BTNClose_MouseLeave(object sender, EventArgs e)
+        {
+            BTNClose.Image = Properties.Resources.closebtn;
+            BTNClose.FlatStyle = FlatStyle.Flat;
+            BTNClose.BackColor = Color.Transparent;
+            BTNClose.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            BTNClose.FlatAppearance.MouseOverBackColor = Color.Transparent;
+        }
+
+        private void SettingsForm_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void label1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
     }
 }
