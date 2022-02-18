@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -68,9 +69,42 @@ namespace SpotifyMotto
             Properties.Settings.Default.Save();
         }
 
-        private void BTNPtbr_Click(object sender, EventArgs e)
+
+
+
+        CancellationTokenSource Token = new CancellationTokenSource();
+        private void CBAntiafk_CheckedChanged(object sender, EventArgs e)
+        {
+            if (CBAntiafk.Checked)
+            {
+                Token = new CancellationTokenSource();
+                _ = StartAntiafk(); 
+            }
+            else
+            {
+                Token.Cancel();
+            }
+        }
+
+        public async Task StartAntiafk()
         {
 
+            while (true)
+            {
+                if (Token.IsCancellationRequested)
+                {
+                    return;
+                }
+
+                SpotifyMotto.AntiAfk();
+                await Task.Delay(1000 * 120);
+            }
+
         }
+
+
+
+
+
     }
 }

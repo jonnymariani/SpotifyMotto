@@ -36,6 +36,7 @@
             this.CBPrefix = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.CBAntiafk = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -91,7 +92,7 @@
             // 
             this.CBPrefix.AutoSize = true;
             this.CBPrefix.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.CBPrefix.Location = new System.Drawing.Point(47, 206);
+            this.CBPrefix.Location = new System.Drawing.Point(43, 205);
             this.CBPrefix.Name = "CBPrefix";
             this.CBPrefix.Size = new System.Drawing.Size(106, 20);
             this.CBPrefix.TabIndex = 6;
@@ -101,6 +102,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.CBAntiafk);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.CBParentheses);
             this.groupBox1.Controls.Add(this.CBPrefix);
@@ -125,6 +127,18 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            // 
+            // CBAntiafk
+            // 
+            this.CBAntiafk.AutoSize = true;
+            this.CBAntiafk.Font = new System.Drawing.Font("SimSun", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.CBAntiafk.Location = new System.Drawing.Point(55, 180);
+            this.CBAntiafk.Name = "CBAntiafk";
+            this.CBAntiafk.Size = new System.Drawing.Size(90, 20);
+            this.CBAntiafk.TabIndex = 8;
+            this.CBAntiafk.Text = "Anti-afk";
+            this.CBAntiafk.UseVisualStyleBackColor = true;
+            this.CBAntiafk.CheckedChanged += new System.EventHandler(this.CBAntiafk_CheckedChanged);
             // 
             // SettingsForm
             // 
@@ -154,5 +168,6 @@
         private System.Windows.Forms.CheckBox CBPrefix;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.CheckBox CBAntiafk;
     }
 }

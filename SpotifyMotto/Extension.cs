@@ -23,11 +23,7 @@ namespace SpotifyMotto
         //Strings
         public String StandardPrefix = "Listening: ";
 
-
-
-
         //Settings
-        public String Language = Properties.Settings.Default.Language;
         public bool RemoveParentheses = Properties.Settings.Default.RemoveParentheses;
         public bool RemoveBrackets =Properties.Settings.Default.RemoveBrackets;
         public bool SayChat = Properties.Settings.Default.SayChat;
@@ -100,6 +96,10 @@ namespace SpotifyMotto
             return Text;
         }
 
+        public void AntiAfk()
+        {
+            Send(Out.Expression, 0);
+        }
 
 
     }

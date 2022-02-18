@@ -97,13 +97,13 @@ namespace SpotifyMotto.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("en")]
-        public string Language {
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool AntiAfk {
             get {
-                return ((string)(this["Language"]));
+                return ((bool)(this["AntiAfk"]));
             }
             set {
-                this["Language"] = value;
+                this["AntiAfk"] = value;
             }
         }
     }
