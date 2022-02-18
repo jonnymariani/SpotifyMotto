@@ -29,7 +29,8 @@
 * Anti-Afk
   
   <br>
-  <a href="#"><img src="SpotifyMotto/resources/screenshot2.png" width="25%" alt="Settings"></a>
+  <a href="#"><img src="SpotifyMotto/resources/screenshot.png" width="44%" alt="Settings"></a>
+    <a href="#"><img src="SpotifyMotto/resources/screenshot2.png" width="25%" alt="Settings"></a>
 
 
 <br>
