@@ -153,7 +153,7 @@
             this.BTNClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BTNClose.Font = new System.Drawing.Font("SimSun", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BTNClose.Image = global::SpotifyMotto.Properties.Resources.closebtn;
-            this.BTNClose.Location = new System.Drawing.Point(213, 5);
+            this.BTNClose.Location = new System.Drawing.Point(213, 6);
             this.BTNClose.Name = "BTNClose";
             this.BTNClose.Size = new System.Drawing.Size(20, 20);
             this.BTNClose.TabIndex = 11;
