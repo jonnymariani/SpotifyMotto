@@ -17,9 +17,6 @@ namespace SpotifyMotto
         { 
         }
 
-
-
-
         //Strings
         public String StandardPrefix = "Listening: ";
 

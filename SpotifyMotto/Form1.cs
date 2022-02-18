@@ -31,20 +31,20 @@ namespace SpotifyMotto
         public readonly Extension SpotifyMotto;
         
         bool Working = true;
+        String Client = "Flash";
 
         public Form1(Extension _extension)
         {
             SpotifyMotto = _extension;
             InitializeComponent();
+
+            Client = SpotifyMotto.ClientIdentifier;     
+
         }
 
         public Extension GetExtension()
         {
             return SpotifyMotto;
-        }
-        public void ChangeStringLanguage(string str)
-        {
-            LBLOriginalMotto.Text = str;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -91,7 +91,7 @@ namespace SpotifyMotto
                             }
                         }                     
 
-                        if (Motto != SpotifyMotto.NoMusicMotto)
+                        if (Motto != SpotifyMotto.NoMusicMotto && Client.StartsWith("Flash"))
                         {
                             SpotifyMotto.SendBadge("Playing:\n" + Motto);                            
                         }               
