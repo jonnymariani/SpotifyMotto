@@ -171,7 +171,7 @@
             this.LBLGithub.BackColor = System.Drawing.Color.Transparent;
             this.LBLGithub.Cursor = System.Windows.Forms.Cursors.Hand;
             this.LBLGithub.Font = new System.Drawing.Font("Volter (Goldfish)", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.LBLGithub.Location = new System.Drawing.Point(404, 332);
+            this.LBLGithub.Location = new System.Drawing.Point(404, 324);
             this.LBLGithub.Name = "LBLGithub";
             this.LBLGithub.Size = new System.Drawing.Size(53, 15);
             this.LBLGithub.TabIndex = 12;

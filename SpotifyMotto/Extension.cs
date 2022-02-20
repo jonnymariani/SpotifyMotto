@@ -73,7 +73,12 @@ namespace SpotifyMotto
 
         public void SendChatText(String Text)
         {
-            Send(Out.Shout, Text, 0);
+            Send(Out.Chat, Text, 0, -1);
+        }
+
+        public void SendChatNotification(String Text)
+        {
+            Send(Out.Whisper, Text, 0);
         }
 
 

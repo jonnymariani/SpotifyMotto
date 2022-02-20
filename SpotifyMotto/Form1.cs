@@ -31,24 +31,19 @@ namespace SpotifyMotto
         public readonly Extension SpotifyMotto;
         
         bool Working = true;
-        String Client = "Flash";
+        String Client = "";
 
         public Form1(Extension _extension)
         {
             SpotifyMotto = _extension;
             InitializeComponent();
-
-            Client = SpotifyMotto.ClientIdentifier;     
-
-        }
-
-        public Extension GetExtension()
-        {
-            return SpotifyMotto;
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Client = SpotifyMotto.ClientIdentifier;
+            MessageBox.Show(Client);
             _ = StartWork();
             TXTNoMusic.Text = Properties.Settings.Default.OriginalMotto;
 
@@ -89,12 +84,16 @@ namespace SpotifyMotto
                             {
                                 Prefix = SpotifyMotto.StandardPrefix;
                             }
-                        }                     
+                        }
 
-                        if (Motto != SpotifyMotto.NoMusicMotto && Client.StartsWith("Flash"))
+                        if (Motto != SpotifyMotto.NoMusicMotto && Client.ToLower().Contains("flash"))
                         {
-                            SpotifyMotto.SendBadge("Playing:\n" + Motto);                            
-                        }               
+                            SpotifyMotto.SendBadge("Playing:\n" + Motto);
+                        }
+                        else if (Motto != SpotifyMotto.NoMusicMotto)
+                        {
+                            SpotifyMotto.SendChatNotification("Playing: " + Motto);
+                        }
 
                         if (SpotifyMotto.SayChat && Motto != SpotifyMotto.NoMusicMotto)
                         {

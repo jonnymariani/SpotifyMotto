@@ -23,7 +23,7 @@ namespace SpotifyMotto
             Extension extension = new Extension(
                 GEarthOptions.Default
                     .WithName("SpotifyMotto")
-                    .WithVersion("1.3") 
+                    .WithVersion("1.1.3") 
                     .WithDescription("Show everyone what you listening!")
                     .WithAuthor("SACR3D")
                     .WithArguments(args)
