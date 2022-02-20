@@ -25,7 +25,7 @@ namespace SpotifyMotto
                     .WithName("SpotifyMotto")
                     .WithVersion("1.1.4") 
                     .WithDescription("Show everyone what you listening!")
-                    .WithAuthor("SACR3D")
+                    .WithAuthor("sourcat")
                     .WithArguments(args)
             );
 
