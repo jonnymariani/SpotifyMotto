@@ -26,9 +26,11 @@
 * Option to remove text between parentheses and brackets.
 * Option to say the song you are listening to in chat.
 * Option to use prefixes before music names.
+* Anti-Afk
   
   <br>
-  <a href="#"><img src="SpotifyMotto/resources/screenshot2.png" width="25%" alt="Settings"></a>
+  <a href="#"><img src="SpotifyMotto/resources/screenshot.png" width="44%" alt="Settings"></a>
+    <a href="#"><img src="SpotifyMotto/resources/screenshot2.png" width="25%" alt="Settings"></a>
 
 
 <br>
@@ -37,8 +39,8 @@
 ## Compatibility
 <br>
 
-* Habbo Flash/AIR Client: :heavy_check_mark:
-* Habbo Unity Client: :x:
+* Habbo Flash/AIR Client: ✔️
+* Habbo Unity Client: ✔️
 
 ##
 <br>
@@ -52,5 +54,5 @@
 
 - [x] Motto Filters ✔️
 - [x] Say the song you are listening to ✔️
-- [ ] Anti Afk
+- [x] Anti Afk ✔️
 - [ ] Bobba Filter
