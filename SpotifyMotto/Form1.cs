@@ -43,7 +43,6 @@ namespace SpotifyMotto
         private void Form1_Load(object sender, EventArgs e)
         {
             Client = SpotifyMotto.ClientIdentifier;
-            MessageBox.Show(Client);
             _ = StartWork();
             TXTNoMusic.Text = Properties.Settings.Default.OriginalMotto;
 
